@@ -80,6 +80,7 @@ Slist Ships;
 Olist Objects;
 uchar Ct[4];
 uchar Win, Enemies, Vessels, Timer, ObjCount;
+int HelpX;
 
 char *Badguys[] = {
   "Barilion", "Crion", "Displacer", "Kahlos", "Lamphry", "Marauder", "Phobos",
@@ -596,9 +597,11 @@ void DrawScr()
   {
     Scnwin = newwin(14, 44, Vessels+4, COLS - 45);
     Prbwin = newwin(12, 44, Vessels+4, COLS - 45);
+    HelpX = 22;
   } else {
     Scnwin = newwin(drow, dcol, 1, 1);
     Prbwin = newwin(12, 44, 3, COLS - 45);
+    HelpX = DisXmid;
   }
   clear();
 
@@ -3087,8 +3090,8 @@ void PCmd()
   mvwaddstr(Scnwin, 0, 0, " Code     Command");
   TCount = (-1);
   X = true;
-  mvwaddstr(Scnwin, 12, 9,"<Space Bar> for other page");
-  mvwaddstr(Scnwin, 13, 12,"<Return> to continue");
+  mvwaddstr(Scnwin, 12, HelpX-13,"<Space Bar> for other page");
+  mvwaddstr(Scnwin, 13, HelpX-10,"<Return> to continue");
   do {
     wmove(Scnwin, 1, 0);
     if (X) {
