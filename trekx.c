@@ -12,6 +12,7 @@
 #include <math.h>
 #include <ctype.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 #define	reg	register
 
@@ -32,11 +33,11 @@ long	_stksize=32768L;
 #define	Void		void
 #define AryMax          100
 typedef	unsigned char	uchar;
+#ifndef true
 #define	true		(1)
 #define	false		(0)
+#endif
 #define	Malloc		malloc
-
-char *malloc();
 
 typedef struct Object {
   double Act_Spd, Des_Spd, Act_Crs, Des_Crs, Fuel, Prx_Del, Tim_Del, XPos,
@@ -1483,7 +1484,7 @@ void Ender()
     sprintf(scrstr,"We have received confirmation from the %s that",
       Snams[0]);
     SEndln();
-    sprintf(scrstr,"   the %ss have surrendered.");
+    sprintf(scrstr,"   the %ss have surrendered.", Enemy);
     waddstr(Cmdwin,scrstr);
     break;
 
@@ -1577,6 +1578,7 @@ void Execute()
   }
   N1 = 0;
   N2 = 0;
+  Win = 0;
   /*
    * Federation disposition
    */
@@ -3085,10 +3087,10 @@ void PCmd()
   mvwaddstr(Scnwin, 0, 0, " Code     Command");
   TCount = (-1);
   X = true;
-  mvwaddstr(Scnwin, 12, DisXmid-13,"<Space Bar> for other page");
-  mvwaddstr(Scnwin, 13, DisXmid-10,"<Return> to continue");
+  mvwaddstr(Scnwin, 12, 9,"<Space Bar> for other page");
+  mvwaddstr(Scnwin, 13, 12,"<Return> to continue");
   do {
-    wmove(Scnwin, 1, 7);
+    wmove(Scnwin, 1, 0);
     if (X) {
       waddstr(Scnwin, "  1  Fire Phasers\n");
       waddstr(Scnwin, "  2  Fire Photon Torpedoes\n");
@@ -3844,7 +3846,7 @@ void Command()
 
 }
 
-main(argc, argv)
+int main(argc, argv)
 int argc;
 Char *argv[];
 {
