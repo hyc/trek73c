@@ -91,25 +91,28 @@
             CODE                       COMMAND
             ====                       =======
 
-            F1      Fire Phasers
-            F2      Fire Photon torpedoes
-            F3      Probe Control (Launch, Lock, Detonate)
-            F4      Load/Unload Photon Torpedo Tubes
-            F5      Manually Change Course and Speed
-            F6      Pursue Enemy Vessel
-            F7     *Damage Report
-            F8      Initiate/Abort Self-Destruct Sequence
-            F9      Surrender/Ask Enemy to Surrender
-            F10     Display List of Commands
-            F11    *Phaser Status/Lock Phasers on Bearing or Target
-            F12    *Tube Status/Lock Tubes on Bearing or Target
-            F13     Alter Power Distribution
-            F14     Change Fring Parameters
-            F15    *Alter Display Radius
-            F16     Run From Enemy Vessel
-            F17     Scan Enemy Vessel
-            F18     Jettison/Detonate Engineering Section
-            F19     Attempt Defenseless Ruse or Corbomite Bluff
+            1       Fire Phasers
+            2       Fire Photon torpedoes
+            3       Probe Control (Launch, Lock, Detonate)
+            4       Load/Unload Photon Torpedo Tubes
+            5       Manually Change Course and Speed
+            6       Pursue Enemy Vessel
+            7      *Damage Report
+            8       Initiate/Abort Self-Destruct Sequence
+            9       Ask Enemy to Surrender
+            0       Attempt Defenseless Ruse
+            -      *List Commands
+            q      *Phaser Status/Lock Phasers on Bearing or Target
+            w      *Tube Status/Lock Tubes on Bearing or Target
+            e       Alter Power Distribution
+            r       Change Fring Parameters
+            t      *Alter Display Radius
+            y       Run From Enemy Vessel
+            u       Scan Enemy Vessel
+            i       Jettison/Detonate Engineering Section
+            o       Surrender
+            p       Attempt Corbomite Bluff
+            [       Quit Game
 
             * Does not take a turn
 1
@@ -172,7 +175,7 @@
                                    COMMANDS:
 
 
-    F1      FIRE PHASERS
+    1       FIRE PHASERS
 
             Phasers are electromagnetic radiation beams similar to lasers,
     in that they emit a coherent beam of energy in "phase" packets... a sort
@@ -199,7 +202,7 @@
     lesser value if energy becomes critical.
 
 
-    F11    *PHASER STATUS/LOCK PHASERS ON BEARING OR TARGET
+    q      *PHASER STATUS/LOCK PHASERS ON BEARING OR TARGET
 
             This command gives a report of deployment, levels, firing
     percentages, and charge/discharge rates of all phasers.  It will also
@@ -216,7 +219,7 @@
 
 
 
-    F2      FIRE PHOTON TORPEDOES
+    2       FIRE PHOTON TORPEDOES
 
             All starships have six Photon Torpedo tubes, which must be
     loaded (Command 9) before firing.  A tube will be loaded with 10 pods or
@@ -236,13 +239,13 @@
     may therefore be maneuvered away from...if you're quick!!
 
 
-    F12    *TUBE STATUS/LOCK TUBES ON BEARING OR TARGET
+    w      *TUBE STATUS/LOCK TUBES ON BEARING OR TARGET
 
             Tube status is a report of deployment, levels, launch speeds,
     proximity delays, and time delays for all tubes.  This command is
-    completely analogous to F11 above.
+    completely analogous to the 'q' Phaser status command above.
 
-    F3      PROBE CONTROL (LAUNCH, DETONATE, REDIRECT)
+    3       PROBE CONTROL (LAUNCH, DETONATE, REDIRECT)
 
             A Probe is a slow-moving device with an internal guidance system
     which allows it to track an enemy ship, or to follow any given course.
@@ -258,7 +261,7 @@
     probe may track an enemy vessel or may follow an actual course in degrees.
 
 
-    F13     ALTER POWER DISTRIBUTION
+    e       ALTER POWER DISTRIBUTION
 
             This command allows you to alter the power to the Shields and
     Phaser banks.  Phasers, once charged, draw no further power until fired,
@@ -273,14 +276,14 @@
                                        7.
 
 
-    F4      LOAD/UNLOAD TUBES
+    4       LOAD/UNLOAD TUBES
 
             The tubes will be loaded with 10 pods each, unless your fuel runs
     out.  You must specify the tubes to be loaded.  Tubes may be unloaded if
     the need arises.  If a loaded tube is damaged, the pods there are lost.
 
 
-    F14     ALTER TORPEDO AND PHASER PARAMETERS
+    r       ALTER TORPEDO AND PHASER PARAMETERS
 
             This command allows the Captain to alter torpedo launch speeds,
     time and proximity fuses.  Initially torpedoes are launched at warp 12,
@@ -288,7 +291,7 @@
             Phaser firing percentages may also be altered.
 
 
-    F5      MANUALLY CHANGE COURSE AND SPEED
+    5       MANUALLY CHANGE COURSE AND SPEED
 
             This command allows the Captain to select any course and/or
     speed; particularly useful when dodging torpedoes, probes, etc.  The
@@ -299,7 +302,7 @@
     His turn rate is R = 5 * (12 - v), so he is more maneuverable.
 
 
-    F15    *ALTER DISPLAY RADIUS
+    t      *ALTER DISPLAY RADIUS
 
             Unlike the previous version of this game, the position report and
     position displays are always on-screen.
@@ -313,7 +316,7 @@
     one will show on the display.
 
 
-    F6      PURSUE ENEMY VESSEL
+    6       PURSUE ENEMY VESSEL
 
             This command causes the computer to attempt to attempt to keep
     the bow of the ship facing toward the enemy ship indicated.  You must
@@ -324,22 +327,22 @@
     ship, as neither torpedoes nor phasers can fire off the stern.
 
 
-    F16     RUN FROM ENEMY VESSEL
+    y       RUN FROM ENEMY VESSEL
 
-            Opposite to F6: keep the stern facing the enemy.
+            Opposite to pursuing: keep the stern facing the enemy.
 1
 
                                        8.
 
 
-    F7     *DAMAGE REPORT
+    7      *DAMAGE REPORT
 
             This command gives the internal status of your ship.  A damaged
     warp drive (somewhat common) limits your speed to warp .9999.  A damaged
-    computer makes commands F6, F16, and F8 impossible.  Auto-tracking of
-    weapons in F11 and F12 is also impossible, though aiming these weapons
+    computer makes command codes 6, y, and 8 impossible.  Auto-tracking of
+    weapons in codes q and w is also impossible, though aiming these weapons
     at a bearing will still be allowed.  It's a very rare occurrence.  Damaged
-    sensors makes commands F15 and F17 impossible.
+    sensors makes command codes t and u impossible.
             When your crew of 450 is dead, the game ends.  The enemy crews
     are 350 each.
             Damaged torpedoes and phasers are indicated by "--", shield
@@ -348,12 +351,12 @@
     initially 10 pods per second.
 
 
-    F17     SCAN ENEMY VESSEL
+    u       SCAN ENEMY VESSEL
 
-            A scan of the enemy identical to Command F7.
+            A scan of the enemy identical to Command 7.
 
 
-    F8      INITIATE/ABORT SELF-DESTRUCT SEQUENCE
+    8       INITIATE/ABORT SELF-DESTRUCT SEQUENCE
 
             This command will either begin or stop the self-destruct sequence.
     If no self destruct is in effect, the sequence will be started.  If it is
@@ -363,7 +366,7 @@
     force of your self-destruction will take the enemy with you.
 
 
-    F18     JETTISON/DETONATE ENGINEERING
+    i       JETTISON/DETONATE ENGINEERING
 
             The Engineering Section of your starship may be jettisoned,
     though this was never done in the television series.  It may, at certain
@@ -383,35 +386,41 @@
                                        9.
 
 
-    F9      SURRENDER/ASK ENEMY TO SURRENDER
+    9       ASK ENEMY TO SURRENDER
 
-            This command gives you the option to surrender your ship or to
-    ask the enemy to surrender.  If you wish to surrender, a message will be
-    dispatched to the enemy asking him to accept your surrender.  He will then
-    decide whether to finish you off or take you prisoner.  If he asks you to
-    drop your shields, and stand by, you had better do just that, or he'll
-    resume his attack.  You will probably not be able to surrender to Romulans,
-    as they have never taken any prisoners (alive). Also, Starfleet records
-    show no instance where Romulans have surrendered a vessel.
+            This command sends a message to the enemy demanding that they
+    surrender. Starfleet records show no instance where Romulans have
+    surrendered a vessel.
 
+    o       SURRENDER
 
-    F19     ATTEMPT DEFENSELESS RUSE/CORBOMITE BLUFF
+            This command sends a message to the enemy asking him to accept
+    your surrender.  He will then decide whether to finish you off or take
+    you prisoner.  If he asks you to drop your shields, and stand by, you
+    had better do just that, or he'll resume his attack.  You will probably
+    not be able to surrender to Romulans, as they have never taken any
+    prisoners (alive).
 
-            This command asks which gambit you wish to try.
+    0       ATTEMPT DEFENSELESS RUSE
+
             The defenseless ruse will drop your shields, and power may be
     diverted to either your engines or your phasers (your choice).  Hopefully,
     the enemy will either come too close, thinking you are helpless, or will
     turn away, thinking you are dead.  You get a brief chance to either destroy
     him, or run away, depending on his reaction to this ploy...if any.
     Remember, he has scanners, too!
+
+    p       ATTEMPT CORBOMITE BLUFFE
+
             The Corbomite bluff was used twice in the television series.  In
     theory, you threaten the enemy with an "ultimate" weapon, and see if he
     backs down.  If he does, you get time to either run away or set up for
     some careful shooting.  If he doesn't, he doesn't!!
 
 
-    F10    *REPRINT ABOVE LIST OF COMMANDS
+    -      *REPRINT ABOVE LIST OF COMMANDS
 
+    [       QUIT GAME
 
 
                              *Does not use a turn
@@ -439,23 +448,18 @@
 
                         INSTRUCTIONS FOR RUNNING "TREK"
 
-            There are two binary files that are necessary to play this game,
-   "Trek.COM" and "Trek.CHN".  The COM file contains all the startup code,
-    and initializes all the variables used by the game, and then Chains into
-    the CHN file.  The CHN segment is huge, and contains all the routines used
-    to actually play the game.  The command "d:Trek", where "d" is the drive
-    ID, is all that is necessary to start running the game.
+            Run the "trekx" binary with no arguments.
 
             The input of commands is timed, and the game will continue play
-    whether it receives your commands or not...  The shifted and unshifted
-    function keys are used for command input, with F1-F10 being the normal keys
-    and F11-F19 the shifted keys.
+    whether it receives your commands or not...  The top two rows of normal
+    keyboard keys are used for command input, with 1-9,0,- being the normal
+    keys and qwertyuiop[ being the additional commands..
 
             When the console requests the name of an enemy ship, either the
     whole name or just the first initial may be input.  Similarly, when tube
     or phaser numbers are requested, the input is free format: "345", "3,4,5",
-    and "3 4 5" are all legal.  Also, when selecting weapon targets (F3, F11,
-    & F12), an angle in degrees may replace a ship name.
+    and "3 4 5" are all legal.  Also, when selecting weapon targets (codes
+    3, q, & w), an angle in degrees may replace a ship name.
 
             This version includes a dynamic display of the Position Report;
     future versions will include the ability to play between two consoles,
@@ -521,4 +525,3 @@
             Firing Angle                    360 Degrees
             Min. Proximity Fuse             50 M
             Max. Proximity Fuse             500 M
-
